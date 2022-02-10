@@ -26,7 +26,9 @@ public class NewsAgency implements Observer, Subject{
 
     @Override
     public void removeObserver(Observer o) {
-
+        if(observers.contains(o)){
+            observers.remove(observers.indexOf(o));
+        }
     }
 
     @Override
